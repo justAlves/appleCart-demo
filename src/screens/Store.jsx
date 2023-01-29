@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { BsFillCartCheckFill, BsFillCartPlusFill } from "react-icons/bs"
+import { BsFillCartCheckFill, BsFillCartPlusFill, BsMoonStarsFill, BsSunFill } from "react-icons/bs"
 import Card from '../components/Card'
 import Cart from "../components/Cart"
 import Header from '../components/Header'
@@ -67,7 +67,7 @@ export default props => {
 
     return(
         <div className={dark ? 'dark' : ''}>
-            <Header darkClick={() => setDark(!dark)} dropCart={() => setCartShow(!cartShow)}/>
+            <Header icon={dark ? <BsSunFill onClick={() => setDark(!dark)} className="transition-all text-white text-2xl font-bold hover:scale-110 cursor-pointer"/> : <BsMoonStarsFill onClick={() => setDark(!dark)} className="transition-all text-white text-2xl font-bold hover:scale-110 cursor-pointer"/>} dropCart={() => setCartShow(!cartShow)}/>
             <div className="flex justify-end mr-4 max-sm:mr-0">
                 {showCart()}
             </div>
