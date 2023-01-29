@@ -28,7 +28,7 @@ export default props => {
 
     return(
         <div className="dark:bg-zinc-800 dark:text-white transition-all p-5 fixed flex flex-col gap-4 justify-between bg-white h-auto w-[400px] rounded-lg mt-[75px] shadow-xl">
-            <h1 className="text-xl font-bold">Carrinho</h1>
+            <h1 className="text-xl font-bold">Carrinho ({cart.length})</h1>
                 {
                     cart.map((i) => (
                         <div className='dark:bg-zinc-600 dark:border-gray-800 bg-white rounded-lg border flex flex-col justify-center p-1'>
